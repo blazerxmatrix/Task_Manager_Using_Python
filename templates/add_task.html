@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <!-- Header with Logo -->
+    <header>
+        <img src="/static/dxc_logo.png" alt="DXC Technology" style="width:150px; display:block; margin: 0 auto;">
+    </header>
+
+    <!-- Main Content -->
+    <h1>Add a New Task</h1>
+    <form method="POST">
+        <p>
+            Task Name: <input type="text" name="task_name" required>
+        </p>
+        <p>
+            Stakeholder: <input type="text" name="stakeholder" required>
+        </p>
+        <p>
+            Responsible: <input type="text" name="responsible" required>
+        </p>
+        <p>
+            Due Date: <input type="date" name="due_date" required>
+        </p>
+        <p>
+            Status:
+            <select name="status" required>
+                <option value="Incomplete">Incomplete</option>
+                <option value="Completed">Completed</option>
+            </select>
+        </p>
+        <p>
+            Completion %: <input type="number" name="completion_percent" min="0" max="100" value="0" required>
+        </p>
+        <p>
+            <button type="submit" class="btn">Add Task</button>
+        </p>
+    </form>
+    <a class="btn" href="/">Back to Task List</a>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 DXC Technology zTPF Engineering Team - Task Manager
+    </footer>
+</body>
+</html>
